@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '/images/Sri_ananthacart_pan.pdf_(1).png';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 
 const NAV_ITEMS = [
@@ -56,15 +57,8 @@ export function Navbar() {
               }}
               className="group flex items-center gap-3"
             >
-              <div className="relative h-10 w-10 perspective-1000">
-                <div className="preserve-3d h-full w-full transition-transform duration-700 group-hover:[transform:rotateY(180deg)]">
-                  <div className="backface-hidden absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-accent-400 to-accent-700 text-ink-960 font-bold text-lg shadow-lg glow-cyan">
-                    Y
-                  </div>
-                  <div className="backface-hidden absolute inset-0 flex items-center justify-center rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 text-ink-960 font-bold text-lg shadow-lg [transform:rotateY(180deg)]">
-                    Y
-                  </div>
-                </div>
+              <div className="relative h-11 w-11 overflow-hidden rounded-xl bg-white shadow-lg glow-cyan transition-transform duration-500 group-hover:scale-105">
+                <img src={logo} alt="Yantra Systems & Infrastructure logo" className="h-full w-full object-contain" />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-base font-bold tracking-tight text-ink-50">

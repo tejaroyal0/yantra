@@ -1,4 +1,5 @@
-import { Code2, Smartphone, Cpu, GraduationCap, Building2, ArrowUp } from 'lucide-react';
+import { Code2, Smartphone, Cpu, GraduationCap, Building2, ArrowUp, MessageCircle } from 'lucide-react';
+import logo from '/images/Sri_ananthacart_pan.pdf_(1).png';
 
 const FOOTER_LINKS = [
   {
@@ -43,8 +44,8 @@ export function Footer() {
           {/* Brand column */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent-400 to-accent-700 text-ink-960 font-bold text-lg glow-cyan">
-                Y
+              <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-white glow-cyan">
+                <img src={logo} alt="Yantra Systems & Infrastructure logo" className="h-full w-full object-contain" />
               </div>
               <div>
                 <div className="text-base font-bold text-ink-50">Yantra</div>
@@ -57,6 +58,9 @@ export function Footer() {
               Engineering digital and physical excellence. From web platforms to
               civil works — one team, multiple disciplines, zero handoffs.
             </p>
+            <a href="https://wa.me/918977843546" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-semibold text-ink-960 transition hover:scale-105">
+              <MessageCircle size={17} /> Chat on WhatsApp
+            </a>
 
             {/* Service icons row */}
             <div className="mt-6 flex gap-3">

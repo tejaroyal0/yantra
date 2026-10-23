@@ -14,19 +14,19 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     label: 'Email Us',
-    value: 'contact@yantrasys.in',
-    href: 'mailto:contact@yantrasys.in',
+    value: 'yantrasysteminfrastructure@gmail.com',
+    href: 'mailto:yantrasysteminfrastructure@gmail.com',
   },
   {
     icon: Phone,
     label: 'Call Us',
-    value: '+91 98765 43210',
-    href: 'tel:+919876543210',
+    value: '8977843546',
+    href: 'tel:+918977843546',
   },
   {
     icon: MapPin,
     label: 'Visit Us',
-    value: 'Hyderabad, Telangana, India',
+    value: 'Tirupati, Andhra Pradesh',
     href: '#',
   },
 ];
@@ -39,11 +39,13 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
+    const message = encodeURIComponent(`Hello Yantra Systems & Infrastructure, my name is ${form.name}. I need help with ${form.service}. ${form.message}`);
+    window.open(`https://wa.me/918977843546?text=${message}`, '_blank', 'noopener,noreferrer');
     setTimeout(() => {
       setStatus('success');
       setForm({ name: '', email: '', service: '', message: '' });
       setTimeout(() => setStatus('idle'), 4000);
-    }, 1800);
+    }, 700);
   };
 
   return (
@@ -63,8 +65,7 @@ export function Contact() {
             Let's Build <span className="text-gradient">Together</span>
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-ink-300">
-            Have a project in mind? Tell us about it — we'll get back within 24
-            hours with a plan and quote.
+            Have a project in mind? Tell us about it — your project details will open directly in WhatsApp for a fast response.
           </p>
         </div>
 
@@ -100,8 +101,7 @@ export function Contact() {
                   <span className="text-sm font-semibold">Fast Response</span>
                 </div>
                 <p className="mt-2 text-sm text-ink-300">
-                  We reply to all inquiries within 24 hours. For urgent projects,
-                  call us directly.
+                  Your project details open directly in WhatsApp. For urgent projects, call 8977843546.
                 </p>
               </div>
             </div>
@@ -179,7 +179,7 @@ export function Contact() {
                 >
                   {status === 'idle' && (
                     <>
-                      Send Message
+                      Send to WhatsApp
                       <Send size={18} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </>
                   )}
